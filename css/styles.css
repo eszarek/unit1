@@ -1,0 +1,128 @@
+/* Nav Styles */
+body, main {
+  z-index: 2;
+  position: relative;
+  background-color: black !important;
+  width: 100%;
+  min-height: 100vh;
+  color: white !important;
+
+}
+a{
+  color: white;
+}
+nav {
+  margin: 0 auto;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1350px) {
+  nav ul {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+nav ul li {
+  text-align: left;
+  font-size: var(--nav-font-size);
+  letter-spacing: 2px;
+  list-style: none;
+  white-space: nowrap;
+  margin-inline: 0;
+}
+
+/* Nav Link Brackets */
+nav ul li a::before,
+nav ul li a::after,
+.page-footer .container ul li a::before,
+.page-footer .container ul li a::after {
+  display: inline-block;
+  font-variation-settings: "wght" 900, "wdth" 75;
+  color: white;
+}
+nav ul li a::before,
+.page-footer ul li a::before {
+  content: "{";
+}
+nav ul li a::after,
+.page-footer ul li a::after {
+  content: "}";
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-variation-settings: "wght" 800, "wdth" 130;
+}
+
+/* table}*/
+table {
+  width: 100%;
+  padding: 1.25rem;}
+
+th{
+  display: table-header-group;
+
+}
+
+
+.collapsible-section-header {
+  background-color: #101010;
+}
+
+.collapsible-section-header a {
+
+  font-weight: 700;
+
+}
+
+.collapse-down a:after {
+  content: "▼";
+  padding-left: 0.5em;
+  text-decoration: none;
+}
+
+.collapse-down a.collapsed:after {
+  content: "+";
+  padding-left: 0.5em;
+  text-decoration: none;
+}
+
+tbody td {
+  background-color: #000000;
+  border-bottom: 1px solid #232323;
+  padding: 1.25rem;
+}
+.card{
+  background-color: #1c1b1b;
+display: revert;
+}
+.card-body{
+  background-color: #1c1b1b !important;
+}
+
+/* .tagtagtagButton */
+.tagButton {
+  display: inline-block;
+  padding: 0.67em;
+  outline-color: white;
+
+}
+.btn-danger{
+  background-color: darkred;
+}
+.btn-success{
+  background-color: #2d134b;
+}
