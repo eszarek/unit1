@@ -25,7 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
   $courseNumber = trim (htmlspecialchars ($_POST['courseNumber']));
   $cName = trim (htmlspecialchars ($_POST['cName']));
-  if(isset($cDescription)){
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['cDescription'])) {
+
   $cDescription = trim (htmlspecialchars ($_POST['cDescription']));}
 
   //check empty fields
@@ -62,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
   else if (isset($cDescription)) {
     //post to insert into database
     $sql= "INSERT INTO userclass (uID, courseNumber, cName, cDescription)
-                    VALUES (:userID, :courseNumber, :cName, :CDescription)";
+                    VALUES (:uID, :courseNumber, :cName, :cDescription)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindValue('uID', $uID);
     $stmt->bindValue('courseNumber', $courseNumber);
@@ -71,7 +72,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $stmt->execute();
 
     //let user know about the status
-    echo  "<p class= 'success'> Information received. Thank you.</p>";
+    echo  "<p class= 'success'> Information received. Thank you.</p><br>
+            <a href=\"addUserClass.php\">Add another</a></div>";
 
     //form status
     $showform = 0;
@@ -87,7 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
        $stmt->execute();
 
        //let user know about the status
-       echo  "<p class= 'success'> Information received. Thank you.</p>";
+       echo  "<p class= 'success'> Information received. Thank you.</p><br>
+                <a href=\"addUserClass.php\">Add another</a></div>";
 
        //form status
        $showform = 0;

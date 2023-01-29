@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
   if (empty($about)){
     $throwError = 1;
-    $aboutError= "Please enter NA if there are no allergies";
+    $aboutError= "Required";
   }
 
   //control for form
