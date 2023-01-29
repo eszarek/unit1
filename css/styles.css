@@ -8,6 +8,10 @@ body, main {
   color: white !important;
 
 }
+#hello{
+
+  pointer-events: none;
+}
 a{
   color: white;
 }
