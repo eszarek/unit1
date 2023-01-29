@@ -1,4 +1,8 @@
 /* Nav Styles */
+nav, main{
+  padding: 1em;
+
+}
 body, main {
   z-index: 2;
   position: relative;
@@ -9,6 +13,7 @@ body, main {
 
 }
 #hello{
+  padding: 1em;
 
   pointer-events: none;
 }
