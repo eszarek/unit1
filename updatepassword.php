@@ -1,11 +1,6 @@
 <?php
 
-/*
-  * Class: csci330fa22
-  * User:  eeszarek
-  * Date:  11/19/2022
-  * Time:  2:09 PM
-*/
+
 $pageName = "Update Password";
 require_once "header.php";
 //checkAdmin();

@@ -1,11 +1,6 @@
 <?php
 header('refresh:5;url=allusers.php');
-/* 
-  * Class: csci330fa22
-  * User:  eeszarek
-  * Date:  12/5/2022
-  * Time:  8:34 AM
-*/
+
 ?>
 <div class="redirect">
 <p class='Success'>User information updated. Redirecting to "All Users" page.</p>

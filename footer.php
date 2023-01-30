@@ -1,6 +1,4 @@
-<?php
 
-?>
 </div><!-- content-wrap -->
 </div> <!-- page-container -->
 </main>

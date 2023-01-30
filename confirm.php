@@ -1,12 +1,5 @@
 <?php
 
-/* 
-  * Class: csci330fa22
-  * User:  eeszarek
-  * Date:  11/18/2022
-  * Time:  4:46 PM
-*/
-
 $pageName = 'Confirm';
 require_once 'header.php';
 

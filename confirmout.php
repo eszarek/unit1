@@ -1,11 +1,5 @@
 <?php
 
-/* 
-  * Class: csci330fa22
-  * User:  eeszarek
-  * Date:  11/19/2022
-  * Time:  1:40 PM
-*/
 $pageName = 'Logged Out';
 require_once 'header.php';
 

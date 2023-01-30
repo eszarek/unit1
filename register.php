@@ -1,11 +1,5 @@
 <?php
 
-/*
-  * Class: csci330fa22
-  * User:  eeszarek
-  * Date:  11/12/2022
-  * Time:  6:57 PM
-*/
 $pageName = "Register";
 require_once "header.php";
 
