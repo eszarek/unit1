@@ -9,7 +9,7 @@ checkLogin();
 $showform = 1; //flag for showform, TRUE
 $throwError = 0;
 $tagError = "";
-$userID=$_SESSION['ID'];
+$uID=$_SESSION['ID'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -33,18 +33,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
   }
   else{
     //post to insert into database
-    $sql= "INSERT INTO userTags (userID, tagSubject)
-                    VALUES (:userID, :tagSubject)";
+    $sql= "INSERT INTO userTags (uID, tagSubject)
+                    VALUES (:uID, :tagSubject)";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindValue('userID', $userID);
+    $stmt->bindValue('uID', $uID);
     $stmt->bindValue('tagSubject', $tagSubject);
     $stmt->execute();
 
     //let user know about the status
-    echo  "<p class= 'success'> Information received. Thank you.</p>";
+    echo  "<p class= 'success'> Tag $tagSubject added. Thank you.</p>";
 
     //form status
-    $showform = 0;
+    $showform = 1;
    }
 
 
@@ -56,21 +56,22 @@ if($showform==1){
 
   ?>
 
-  <h3> <strong>Add a new subject tag</strong></h3>
+  <h5> <strong>Add a new subject tag</strong></h5><br>
 
   <form  name="addTag" method="post" action="<?php echo ($currentFile);?>">
     <label for="tagSubject"><strong>Tag</strong></label><br>
-    <input id="tagSubject" name="tagSubject" type="text" value="<?php if (isset($tagSubject)) {echo $tagSubject;}?>">
+      <br>
+    <input id="tagSubject" name="tagSubject" type="text" value="">
     <?php if (!empty($tagError)) {echo "<span class = 'error'>$tagError</span>";}?>
-    <br>
+    <br><br>
 
-    <label for="submit">Submit:</label><input id="submit" name="submit" type="submit" value="submit">
+    <label for="submit">Submit:&nbsp;</label><input id="submit" name="submit" type="submit" value="Add Tag"">
   </form>
   <br><br>
 
   <?php
 }//closing if showform
 
-
+require_once "AllTags.php";
 require_once "footer.php";
 ?>

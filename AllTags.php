@@ -8,12 +8,15 @@
 */
 require_once "header.php";
 require_once "connect.php";
-$sql = 'SELECT * FROM Tags';
+checkLogin();
+
+$uID=$_SESSION['ID'];
+$sql = 'SELECT * FROM userTags where uid = :uID';
 
 //prepares a statement for execution
 
 $stmt = $pdo->prepare($sql);
-
+$stmt->bindValue('uID', $uID);
 //execute the query
 $stmt->execute();
 
@@ -35,9 +38,8 @@ if(empty($result)){
 
     ?>
   <div class="btn-group btn-group-md tagButton" role="group" aria-label="Medium button group">
-  <button type="button" class="btn btn-danger">X</button>
-  <button type="button" class="btn btn-dark "><?php echo $row['Subject'];?></button>
-  <button type="button" class="btn btn-success " href="update.php?q=<?php echo $row['emp_no'];?>">Update</button>
+  <a type="button" class="btn btn-danger" href="deleteTag.php?q=<?php echo $uID;?>&l=<?php echo$row['tagID'];?>">X</a>
+  <button type="button" class="btn btn-dark "><?php echo $row['tagSubject'];?></button>
   </div>
     <?php
   }//close for each

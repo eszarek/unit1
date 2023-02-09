@@ -135,3 +135,20 @@ display: revert;
 .btn-success{
   background-color: #2d134b;
 }
+
+input{
+  width: 50%;
+}
+textarea {
+  width: 75%;
+}
+input[type=submit]{
+  width: fit-content;
+  background-color: #773b3b;
+  border: solid white;
+  color: #ffffff;
+  padding: 10px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

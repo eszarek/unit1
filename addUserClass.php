@@ -118,7 +118,7 @@ if($showform==1){
     <br><br>
 
     <label for="cDescription"><strong>Course Description</strong></label><br>
-    <input id="cDescription" name="cDescription" type="text" value="<?php if (isset($cDescription)) {echo $cDescription;}?>">
+      <textarea id="cDescription" name="cDescription" type="text" rows="10" cols="50"><?php if (isset($cDescription)) {echo $cDescription;}?></textarea>
     <?php if (!empty($cDescriptionError)) {echo "<span class = 'error'>$cDescriptionError</span>";}?>
     <br><br>
 

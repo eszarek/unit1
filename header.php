@@ -67,7 +67,17 @@ if ($passlogout==1){
   }
 
   if (isset($_SESSION['status']) ) {
-    echo ($currentFile == "addUserClass.php") ? "<li><span class='navpage'>Add classes</span></li>" : "<li><a href='addUserClass.php?q=$q'>Add Classes</a></li>";
+    echo "
+        <li class='nav-item dropdown show navpage'>
+        <a class='nav-link dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' 
+        aria-haspopup='true' aria-expanded='false'>Classes and Tags}</a>
+        <!-- dropdown items -->
+          <div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
+            <a class='dropdown-item' href='addUserClass.php?q=$q'>Add Classes</a>
+            <a class='dropdown-item' href='addTag.php?q=$q'>Manage Tags</a>
+          </div>
+        </li>
+        ";
   }
 
   if (!isset($_SESSION['status']) ) {
