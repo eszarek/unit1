@@ -54,11 +54,12 @@ if ($passlogout==1){
 </section>
 <div id="hello">
   <h1>Erinn Szarek</h1>
-  <h2>Cycle 1</h2>
+  <h2>Cycle 2</h2>
 </div>
 <nav>
 
   <?php
+
   echo "<ul>";
   echo ($currentFile == "index.php") ? "<li><span class='navpage'>Home</span></li></li>" : "<li><a href='index.php'>Home</a></li>";
 

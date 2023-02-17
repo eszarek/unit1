@@ -80,11 +80,14 @@ nav ul li a {
 table {
   width: 100%;
   padding: 1.25rem;}
-
+#classTags > th{
+  display: inline;
+}
+/*
 th{
   display: table-header-group;
 
-}
+}*/
 
 
 .collapsible-section-header {

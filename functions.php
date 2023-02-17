@@ -66,4 +66,22 @@ function checkAdminFlag($page='something'){
     return True;
 }
 
+function arrayTagging($conn, $callClassNumber, $uID){
+    require_once "connect.php";
+    $sql =
+        'SELECT `userTags`.`tagSubject` 
+    FROM `userclass`
+        LEFT JOIN `class_tags` ON `class_tags`.`CourseNumber` = `userclass`.`courseNumber`
+        LEFT JOIN `userTags` ON `class_tags`.`tagID` = `userTags`.`tagID`
+    where userclass.uid = :uID AND userclass.CourseNumber = :callClassNumber';
+//prepares a statement for execution
 
+    $stmt = $conn->prepare($sql);
+    $stmt->bindValue('uID', $uID);
+    $stmt->bindValue('classNumber', $callClassNumber);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $row;
+
+
+}

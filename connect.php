@@ -27,4 +27,6 @@ $user = "303f2eeszarek";
 $pass = "cscif26377";
 $pdo = new PDO($dsn,$user,$pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = new PDO($dsn,$user,$pass);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
