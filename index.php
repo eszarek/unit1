@@ -6,14 +6,14 @@ require_once "header.php";
 ?>
 <div class="welcome">
 
-      <h2>Stage 1</h2>
+      <h2>Stage 2</h2>
       <p>
-        Stage 1 is a database of classes, the beginning of a programming portfolio.
+        Stage is adding tagging categorization abilities
       </p><br>
       <h4>What about you?</n></h4>
 
       <p>
-        Sign in and add your classes to have a similar set-up available for you!
+        Sign in and add tags to your classes.
       </p>
 
 </div>

@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         if ($row) {
             if (password_verify($password, $row['hashpwd'])) {
                 // SET SESSION VARIABLES
-                $_SESSION['ID'] = $row['ID'];
+                $_SESSION['ID'] = $row['uID'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['status'] = $row['isAdmin'];
 
